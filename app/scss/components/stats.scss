@@ -1,0 +1,43 @@
+@use '../utility'as *;
+
+.stats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: rem(92);
+
+    .stats__result{
+        font-weight: 700;
+        font-size: rem(36);
+        letter-spacing: 0.125em;
+        text-transform: uppercase;
+    }
+
+    .stats__details{
+        margin-top: rem(6);
+        width: rem(412);
+        height: rem(84);
+        display: flex;
+        justify-content: space-between;
+
+        .stats__detail {
+            flex-basis: rem(84);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .stats__num{
+                font-size: rem(32);
+                font-weight: 700;
+            }
+
+            .stats__label{
+                margin-top: rem(7);
+                font-size: rem(14);
+            }
+        }
+
+    }
+}

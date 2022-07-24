@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/style.css">
+    <script defer src="dist/all.js"></script>
+    <title>Fruit machine</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <p>Fruit machine </p>
+        </header>
+        <section class="game">
+            <section class="game__fruits">
+                <div class="game__fruit strawberry">
+                    <div class="game__img strawberry fruit-in"></div>
+                </div>
+                <div class="game__fruit lemon">
+                    <div class="game__img lemon fruit-in"></div>
+                </div>
+                <div class="game__fruit pear">
+                    <div class="game__img pear fruit-in"></div>
+                </div>
+            </section>
+            <section class="game__user-interaction">
+                <form class="game__form">
+                    <label for="amount" class="visually-hidden">Amount</label>
+                    <input type="number" class="game__input" id="amount" placeholder="amount">
+                    <button class="game__start">Go</button>
+                </form>
+                <p class="game__amount"></p>
+            </section>
+        </section>
+        <section class="stats">
+            <div class="stats__result">
+                <p>Let's play</p>
+            </div>
+            <section class="stats__details">
+                <div class="stats__detail">
+                    <p class="stats__num">0</p>
+                    <p class="stats__label">played</p>
+                </div>
+                <div class="stats__detail">
+                    <p class="stats__num">0</p>
+                    <p class="stats__label">won</p>
+                </div>
+                <div class="stats__detail">
+                    <p class="stats__num">0</p>
+                    <p class="stats__label">lost</p>
+                </div>
+            </section>
+        </section>
+    </div>
+</body>
+
+</html>

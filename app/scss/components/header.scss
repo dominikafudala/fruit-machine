@@ -1,0 +1,30 @@
+@use '../utility'as *;
+
+header {
+    position: relative;
+    height: rem(164);
+
+    p {
+        position: absolute;
+        left:50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        width: rem(452);
+        height: rem(116);
+
+    
+        font-family: $font-grandstander;
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(64);
+        line-height: 1;
+        text-align: center;
+        letter-spacing: 0.235em;
+        text-transform: uppercase;
+
+        background: linear-gradient(180deg, $red-gradient 0%, $orange-gradient 100%);
+        color:transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+}
