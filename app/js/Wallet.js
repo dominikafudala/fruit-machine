@@ -10,8 +10,12 @@ class Wallet {
     }
 
     changeAmount(bet, isWinner){
-        if(isWinner) return this.#amount+= (3 * bet);
-        return this.#amount -= bet;
+        if(isWinner) {
+            this.#amount+= (3 * bet);
+            return `You won ${3 * bet}$`;
+        }
+        this.#amount -= bet;
+        return `You lost ${bet}$`
     }
 
     checkCanPlay(bet){

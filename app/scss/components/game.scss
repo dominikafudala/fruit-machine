@@ -1,12 +1,12 @@
-@use '../utility'as *;
+@use '../utility' as *;
 
-.game{
+.game {
     margin-top: rem(40);
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    .game__fruits{
+    .game__fruits {
         width: rem(712);
         display: flex;
         justify-content: space-between;
@@ -14,7 +14,8 @@
 
         margin-top: rem(27);
 
-        .game__fruit{
+        .game__fruit {
+            position: relative;
             width: rem(160);
             height: rem(160);
             overflow: hidden;
@@ -22,36 +23,40 @@
             border-width: 2px 0px;
             border-style: solid;
 
-            transition: border-color .1s;
+            transition: border-color .01s;
 
-            &.strawberry{
+            &.strawberry {
                 border-color: $red-strawberry;
             }
 
-            &.lemon{
+            &.lemon {
                 border-color: $yellow-lemon;
             }
 
-            &.pear{
+            &.pear {
                 border-color: $orange-pear;
             }
 
             .game__img {
-                height: 100%;
+                height: rem(160);
+                width: rem(160);
                 background-repeat: no-repeat;
                 background-position: center;
                 transform: translateY(-100%);
+                position: absolute;
+                top: 0;
+                left: 0;
 
 
-                &.strawberry{
+                &.strawberry {
                     background-image: url(/img/strawberry.svg);
                 }
-    
-                &.lemon{
+
+                &.lemon {
                     background-image: url(/img/lemon.svg);
                 }
-    
-                &.pear{
+
+                &.pear {
                     background-image: url(/img/pear.svg);
                 }
 
@@ -60,7 +65,11 @@
                     transform: translateY(100%);
                     transition: transform .1s;
                 }
-    
+
+                &.fruit-top {
+                    transform: translateY(-100%);
+                }
+
                 &.fruit-in {
                     transform: translateY(0);
                     transition: transform .1s;
@@ -70,19 +79,19 @@
         }
     }
 
-    .game__user-interaction{
+    .game__user-interaction {
         position: relative;
 
         height: rem(112);
         width: rem(512);
         margin-top: rem(69);
-        
-        .game__form{
+
+        .game__form {
             height: rem(68);
             display: flex;
             justify-content: space-between;
 
-            .game__input{
+            .game__input {
                 width: rem(270);
                 font-size: rem(24);
                 line-height: rem(68);
@@ -91,11 +100,11 @@
                 border: none;
                 border-radius: rem(4);
 
-                &::placeholder{
+                &::placeholder {
                     color: $grey-font;
                 }
 
-                &:focus{
+                &:focus {
                     outline: none;
                     box-shadow: 0 0 0 1px $brown-accent;
                 }
@@ -128,14 +137,14 @@
 
                 padding: 0 2.375em;
 
-                &:hover{
+                &:hover {
                     background-color: $dark-orange-accent;
                     cursor: pointer;
                 }
             }
         }
 
-        .game__amount{
+        .game__amount {
             position: absolute;
             bottom: rem(2);
             left: rem(65);

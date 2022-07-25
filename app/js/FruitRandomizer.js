@@ -13,4 +13,8 @@ class FruitRandomizer {
         return this.#choice[Math.floor(Math.random() * this.#choice.length)];
     }
 
+    get choice(){
+        return this.#choice;
+    }
+
 }
